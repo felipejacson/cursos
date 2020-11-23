@@ -78,12 +78,6 @@
   * **Maven**
   * **Docker**
 
-* **Como executar o projeto:** <br /><br />
-  Para executar o projeto execute os seguintes comandos na pasta principal do projeto:
-    <br />
-    * **`mvn clean package -P prod`**<br />
-    * **`docker-compose -f docker-compose.yml up -d`**
-
 * **IMPORTANTE:** <br /><br />
   **Quando o sistema é executado pela primeira vez o banco de dados está sem nenhum registro.
   Para poder realizar a busca de dados, primeiramente, este deve ser inserido.**
