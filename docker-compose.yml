@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      - MYSQL_DATABASE=pacotesviagens
+      - MYSQL_USER=pacotesviagens
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=America/Sao_Paulo
+    ports:
+      - 3306:3306
+    volumes:
+      - ./banco/mysql:/var/lib/mysql
+    restart: always
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=pacotesviagens
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - TZ=America/Sao_Paulo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./banco/mongo:/data/db
+    restart: always

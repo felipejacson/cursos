@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>{{cur.titulo}} Curso</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-success" role="alert" ng-if="cur.mensagemSucesso">{{cur.mensagemSucesso}}</div>
+                    <div class="alert alert-danger" role="alert" ng-if="cur.mensagemErro">{{cur.mensagemErro}}</div>
+                    <form ng-submit="cur.submit()" name="dados">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="cur.curso.cursoId" />
+                            <label for="titulo">Título</label>
+                            <input type="text" class="form-control" ng-model="cur.curso.titulo" id="titulo" placeholder="Digite o título">
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <input type="text" class="form-control" ng-model="cur.curso.descricao" id="descricao" placeholder="Digite a descrição">
+                        </div>
+                        <div class="form-group">
+                            <label for="cargaHoraria">Carga Horária</label>
+                            <input type="text" class="form-control" ng-model="cur.curso.cargaHoraria" id="cargaHoraria" placeholder="Digite a carga horária" pattern="^\d*(\.\d{0,2})?$">
+                        </div>
+                        <div class="form-group">
+                            <label for="valor">Valor</label>
+                            <input type="text" class="form-control" ng-model="cur.curso.valor" id="valor" placeholder="Digite o valor" pattern="^\d*(\.\d{0,2})?$">
+                        </div>
+                        <button type="submit" ng-click="submit()" ng-disabled="habilitarBotao" class="btn btn-primary">Salvar</button>
+                        <button type="button" ng-click="limparCampos()" class="btn btn-secondary">Limpar Campos</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>Lista de Cursos</h4></div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Código</td>
+                                <td>Título</td>
+                                <td>Descrição</td>
+                                <td>Carga Horária</td>
+                                <td>Valor</td>
+                                <td class="min">&nbsp;</td>
+                                <td class="min">&nbsp;</td>
+                                <td class="min">&nbsp;</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="c in cur.listaCursos">
+                                <td>{{c.cursoId}}</td>
+                                <td>{{c.titulo}}</td>
+                                <td>{{c.descricao}}</td>
+                                <td>{{c.cargaHoraria}}</td>
+                                <td>{{c.valor}}</td>
+                                <td><button type="button" ng-click="editar(c.cursoId)"><i class="glyphicon glyphicon-pencil"></i></button></td>
+                                <td><button type="button" ng-click="remover(c.cursoId)"><i class="glyphicon glyphicon-remove"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

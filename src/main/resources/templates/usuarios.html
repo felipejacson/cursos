@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="panel panel-default">                
+                <div class="panel-heading">
+                    <h4>{{ctrl.titulo}} Usuário</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-success" role="alert" ng-if="ctrl.mensagemSucesso">{{ctrl.mensagemSucesso}}</div>
+	                <div class="alert alert-danger" role="alert" ng-if="ctrl.mensagemErro">{{ctrl.mensagemErro}}</div>
+                    <form ng-submit="ctrl.submit()" name="dados">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="ctrl.usuario.usuarioId" />
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" ng-model="ctrl.usuario.nome" id="nome" placeholder="Digite o nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" ng-model="ctrl.usuario.telefone" id="telefone" placeholder="Digite o telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" ng-model="ctrl.usuario.endereco" id="endereco" placeholder="Digite o endereco">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataAdmissao">Data de Admissão</label>
+                            <input type="text" class="form-control" ng-model="ctrl.usuario.dataAdmissao" id="dataAdmissao" placeholder="Digite a data de admissão">
+                        </div>
+                        <button type="submit" ng-click="submit()" ng-disabled="habilitarBotao" class="btn btn-primary">Salvar</button>
+                        <button type="button" ng-click="limparCampos()" class="btn btn-secondary">Limpar Campos</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Lista de Usuário</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Código</td>
+                                <td>Nome</td>
+                                <td>Telefone</td>
+                                <td>Endereço</td>
+                                <td>Data de Admissão</td>
+                                <td class="min">&nbsp;</td>
+                                <td class="min">&nbsp;</td>
+                            </tr>
+                        </thead>
+                        <tbody>                            
+                            <tr ng-repeat="u in ctrl.listaUsuarios">                                                               
+                                <td>{{u.usuarioId}}</td>
+                                <td>{{u.nome}}</td>
+                                <td>{{u.telefone}}</td>
+                                <td>{{u.endereco}}</td>
+                                <td>{{u.dataAdmissao}}</td>                                                         
+                                <td><button type="button" ng-click="editar(u.usuarioId)"><i class="glyphicon glyphicon-pencil"></i></button></td>                                
+                                <td><button type="button" ng-click="remover(u.usuarioId)"><i class="glyphicon glyphicon-remove"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

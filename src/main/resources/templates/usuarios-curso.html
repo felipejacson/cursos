@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>Curso: {{usu.curso.titulo}}</h4>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <a class="btn btn-primary" ui-sref="cursos">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Lista de Usuário</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <td class="min">&nbsp;</td>
+                            <td class="min">Código</td>
+                            <td>Nome</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="u in ctrl.listaUsuarios">
+                            <td><input type="checkbox" name="usuario" value="{{u.usuarioId}}"></td>
+                            <td>{{u.usuarioId}}</td>
+                            <td>{{u.nome}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
