@@ -8,10 +8,6 @@
 
     `/cursos`
 
-    * **Method:**
-  
-        `GET`
-
 * **(GET) Consultando um curso**
 
     `/cursos/{id}`
@@ -47,10 +43,6 @@
 * **(GET) Consultando todos os usuários**
 
     `/usuarios`
-
-    * **Method:**
-  
-        `GET`
         
 * **(GET) Consultando um usuário**
 
