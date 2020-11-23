@@ -14,7 +14,7 @@
 
 * **Consultando um curso**
 
-    `/cursos/{id}
+    `/cursos/{id}`
 
     * **Method:**
   
