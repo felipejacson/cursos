@@ -4,9 +4,17 @@
   <br /> 
   
   O sistema possui os seguintes endpoints REST com seus respectivos retornos:
-* **Consultando um curso**
+* **Consultando todos os cursos**
 
     `/cursos`
+
+    * **Method:**
+  
+        `GET`
+
+* **Consultando um curso**
+
+    `/cursos/{id}
 
     * **Method:**
   
@@ -19,6 +27,14 @@
     * **Method:**
   
         `POST`
+        
+    * **Body:**  
+    `{`<br />
+        `"titulo": "TITULO",`<br />
+        `"descricao": "DESCRIÇÃO",`<br />
+        `"cargaHoraria": 1.0,`<br />
+        `"valor": 2.0`<br />
+    `}`<br />        
 
 * **Alterando um curso**
 
@@ -27,6 +43,14 @@
     * **Method:**
   
         `PUT`
+        
+    * **Body:**  
+    `{`<br />
+        `"titulo": "TITULO",`<br />
+        `"descricao": "DESCRIÇÃO",`<br />
+        `"cargaHoraria": 1.0,`<br />
+        `"valor": 2.0`<br />
+    `}`<br />            
 
 * **Excluindo um curso**
 
@@ -36,9 +60,17 @@
   
         `DELETE`
 
-* **Consultando um usuário**
+* **Consultando todos os usuários**
 
     `/usuarios`
+
+    * **Method:**
+  
+        `GET`
+        
+* **Consultando um usuário**
+
+    `/usuarios/{id}`
 
     * **Method:**
   
@@ -51,6 +83,14 @@
     * **Method:**
   
         `POST`
+        
+    * **Body:**  
+        `{`<br />
+            `"nome": "NOME",`        
+             `"telefone": "(XX) XXXXX-XXXX",`<br />
+             `"endereco": "ENDEREÇO",`<br />
+             `"dataAdmissao": "XX/XX/XXXX"`<br />
+         `}`<br />        
 
 * **Alterando um usuário**
 
@@ -59,6 +99,14 @@
     * **Method:**
   
         `PUT`
+        
+    * **Body:**  
+        `{`<br />
+            `"nome": "NOME",`        
+             `"telefone": "(XX) XXXXX-XXXX",`<br />
+             `"endereco": "ENDEREÇO",`<br />
+             `"dataAdmissao": "XX/XX/XXXX"`<br />
+         `}`<br />
 
 * **Excluindo um usuário**
 
@@ -77,6 +125,12 @@
   * **MongoDB**
   * **Maven**
   * **Docker**
+
+* **Como executar o projeto:** <br /><br />
+  Para executar o projeto execute os seguintes comandos na pasta principal do projeto:
+    <br />
+    * **`mvn clean package -P prod -DskipTests`**<br />
+    * **`docker-compose -f docker-compose.yml up -d`**
 
 * **IMPORTANTE:** <br /><br />
   **Quando o sistema é executado pela primeira vez o banco de dados está sem nenhum registro.
