@@ -16,17 +16,9 @@
 
     `/cursos/{id}`
 
-    * **Method:**
-  
-        `GET`
-
 * **(POST) Inserindo um curso**
 
     `/cursos`
-
-    * **Method:**
-  
-        `POST`
         
     * **Body:**  
     `{`<br />
@@ -39,10 +31,6 @@
 * **(PUT) Alterando um curso**
 
     `/cursos/{id}`
-
-    * **Method:**
-  
-        `PUT`
         
     * **Body:**  
     `{`<br />
@@ -52,15 +40,11 @@
         `"valor": 2.0`<br />
     `}`<br />            
 
-* **Excluindo um curso**
+* **(DELETE) Excluindo um curso**
 
     `/cursos/{id}`
 
-    * **Method:**
-  
-        `DELETE`
-
-* **Consultando todos os usuários**
+* **(GET) Consultando todos os usuários**
 
     `/usuarios`
 
@@ -68,21 +52,13 @@
   
         `GET`
         
-* **Consultando um usuário**
+* **(GET) Consultando um usuário**
 
     `/usuarios/{id}`
 
-    * **Method:**
-  
-        `GET`
-
-* **Inserindo um usuário**
+* **(POST) Inserindo um usuário**
 
     `/usuários`
-
-    * **Method:**
-  
-        `POST`
         
     * **Body:**  
         `{`<br />
@@ -92,13 +68,9 @@
              `"dataAdmissao": "XX/XX/XXXX"`<br />
          `}`<br />        
 
-* **Alterando um usuário**
+* **(PUT) Alterando um usuário**
 
     `/usuarios/{id}`
-
-    * **Method:**
-  
-        `PUT`
         
     * **Body:**  
         `{`<br />
@@ -108,13 +80,9 @@
              `"dataAdmissao": "XX/XX/XXXX"`<br />
          `}`<br />
 
-* **Excluindo um usuário**
+* **(DELETE) Excluindo um usuário**
 
     `/usuarios/{id}`
-
-    * **Method:**
-  
-        `DELETE`
 
 * **Tecnologias Usadas:** <br /><br />
   O projeto está usando as seguintes tecnologias: <br />
