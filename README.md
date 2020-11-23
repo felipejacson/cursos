@@ -4,7 +4,7 @@
   <br /> 
   
   O sistema possui os seguintes endpoints REST com seus respectivos retornos:
-* **Consultando todos os cursos**
+* **(GET) Consultando todos os cursos**
 
     `/cursos`
 
@@ -12,7 +12,7 @@
   
         `GET`
 
-* **Consultando um curso**
+* **(GET) Consultando um curso**
 
     `/cursos/{id}`
 
@@ -20,7 +20,7 @@
   
         `GET`
 
-* **Inserindo um curso**
+* **(POST) Inserindo um curso**
 
     `/cursos`
 
@@ -36,7 +36,7 @@
         `"valor": 2.0`<br />
     `}`<br />        
 
-* **Alterando um curso**
+* **(PUT) Alterando um curso**
 
     `/cursos/{id}`
 
